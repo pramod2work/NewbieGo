@@ -12,6 +12,7 @@ import {
   Grid,
   GridColHeader,
 } from '../../style/styles'
+import { gotoPage } from '../history'
 
 export class PreferredNameUpdate extends Component {
   render() {
