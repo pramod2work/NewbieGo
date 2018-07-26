@@ -6,14 +6,18 @@ const enhancer = WrappedComponent => class PreferredNameComponent extends Wrappe
   constructor(props) {
     super(props)
 
+    this.state = { isSubmitting: false }
     this.submitForm = this.submitForm.bind(this)
   }
 
+  componentDidUpdate(props) {
+    window.setTimeout(() => {
+      this.setState({ ...this.state, isSubmitting: !this.state.isSubmitting })
+    }, 2000)
+  }
+
   submitForm = ({ userName, password }) => {
-    this.isFormSubmit = true
-    const { data } = this.props.logInInitData
-    data.callbacks[0].input[0].value = userName
-    data.callbacks[1].input[0].value = password
+    this.setState({ ...this.state, isSubmitting: !this.state.isSubmitting })
   }
 
   render() {

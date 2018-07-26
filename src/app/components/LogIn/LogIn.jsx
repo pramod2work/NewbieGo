@@ -18,6 +18,7 @@ export class PreferredNameUpdate extends Component {
     const {
       logInData,
     } = this.props
+    const { isSubmitting } = this.state
 
     return (
       <TransitionStateFromRight>
@@ -36,7 +37,8 @@ export class PreferredNameUpdate extends Component {
 
               <PrimaryActionBar
                 actionButtonLabel="Done"
-                handleClick={() => {}}
+                handleClick={this.submitForm}
+                isSubmitting={isSubmitting}
                 paddingTop="24px"
                 paddingBottom="0px"
                 actionType="button"

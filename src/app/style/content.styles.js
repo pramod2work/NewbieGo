@@ -9,6 +9,7 @@ import ContentClear from 'material-ui/svg-icons/content/clear'
 import ActionCheckCircle from 'material-ui/svg-icons/action/check-circle'
 import Done from 'material-ui/svg-icons/action/done'
 import fingerPrintIcon from 'material-ui/svg-icons/action/fingerprint'
+import './global.styles'
 
 import styleVars, { extraLargeFont } from './global'
 
