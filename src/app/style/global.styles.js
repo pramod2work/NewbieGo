@@ -4,7 +4,9 @@ import styleVars, { fontFace, defaultFont } from './global'
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
+
   html {
+    font-family: 'myraid-pro';
     ${{ ...defaultFont }};
   }
 

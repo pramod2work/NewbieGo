@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Grid as ThemeGrid, Row, Col } from 'react-styled-flexboxgrid'
 
-import { isIE } from '../utils/global'
+import newbieGoLogo from '../../assets/img/newbie-logo.png'
 
 import styleVars, { largeFont } from './global'
 import {
@@ -21,12 +21,12 @@ export const AppContainer = styled.div`
 
 export const AppMain = styled.main`
   flex: 1 0 auto;
-  background-color: ${styleVars.color.stoneExtraLight};
+  background-color: ${styleVars.color.white};
 `
 
 /* eslint-disable no-nested-ternary */
 export const MainContainer = styled.div`
-  margin: ${styleVars.app.isMobileApp ? '48px auto 0' : '164.5px auto 48px'};
+  margin: 48px auto 0;
   max-width: ${styleVars.container.width.lg};
 
   @media screen and (max-width: ${styleVars.container.breakpoint.md}) {
@@ -303,7 +303,7 @@ export const RowTitle = styled(Row)`
 
 export const GridRow = RowTitle.extend`
   padding-top: ${props => (props.paddingTop || '12px')};
-  margin-bottom: ${props => (props.endSection ? '56px' : 0)};
+  margin-bottom: ${props => (props.marginBottom || 0)};
 `
 
 export const StyledLink = styled.button.attrs({
@@ -356,6 +356,14 @@ export const InlineActionLink = StyledLink.extend`
 export const GridColumn = styled(Col)`
   padding-left: ${props => props.paddingLeft || '16px'};
   padding-right: ${props => props.paddingRight || '16px'};
+  padding-bottom: ${props => props.paddingBottom || '0'};
+`
+
+export const NewbieAvatar = styled.img.attrs({
+  src: newbieGoLogo,
+})`
+  width: 100%;
+  margin-top: -25px;
 `
 
 export const GridColHeader = GridColumn.extend`
@@ -401,6 +409,21 @@ export const SectionContainerWithSwimLine = SectionContainer.extend`
 
     .action-container {
       padding-right: 16px;
+    }
+  `}
+`
+
+export const InputWrapper = styled.div`
+  label {
+    font-family: myraid-pro !important;
+  }
+
+  ${props => props.checked && css`
+    svg {
+      fill: ${styleVars.color.oceanBlue} !important;
+    }
+    label {
+      color: ${styleVars.color.oceanBlue} !important;
     }
   `}
 `

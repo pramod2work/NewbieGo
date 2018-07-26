@@ -11,11 +11,16 @@ import Done from 'material-ui/svg-icons/action/done'
 import fingerPrintIcon from 'material-ui/svg-icons/action/fingerprint'
 import './global.styles'
 
-import styleVars, { extraLargeFont, largeFont } from './global'
+import styleVars, {
+  extraLargeFont,
+  largeFont,
+  extraSmallFont,
+  smallFont,
+  mediumFont,
+} from './global'
 
 export const Heading = styled.h1`
   margin: 0 0 ${props => props.marginBottom || '48px'};
-  font-weight: normal;
   ${{ ...extraLargeFont }}
 `
 
@@ -30,6 +35,21 @@ const iconMediumFontSize = {
 
 export const LargeFont = styled.span`
   ${{ ...largeFont }};
+`
+export const MediumFont = styled.span`
+  ${{ ...mediumFont }};
+`
+export const SmallFont = styled.span`
+  ${{ ...smallFont }};
+`
+export const ExtraSmallFont = styled.span`
+  ${{ ...extraSmallFont }};
+`
+export const LighterFont = styled.span`
+  color: ${styleVars.color.lighterFontStone70};
+`
+export const ExtraLighterFont = styled.span`
+  color: ${styleVars.color.disabledStone40};
 `
 
 export const IconBackAction = {
@@ -157,5 +177,6 @@ export const IconFingerprint = styled(fingerPrintIcon).attrs({
 `
 
 export const ParaWrapper = styled.div`
+  padding-left: ${props => (props.paddingLeft || 0)};
   margin: 0 0 ${props => (props.marginBottom || 0)};
 `

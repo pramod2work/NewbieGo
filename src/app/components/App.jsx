@@ -6,14 +6,18 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { ThemeProvider } from 'styled-components'
 
 import LoginComponent from './LogIn'
-import HeaderComponent from './Header'
 import ProfileComponent from './Profile'
+import FooterComponent from './Footer'
 import { gotoPage } from './history'
 
 import {
   AppContainer,
   AppMain,
   MainContainer,
+  NewbieAvatar,
+  Grid,
+  GridRow,
+  GridColumn,
 } from '../style/styles'
 import styleVars, { gridTheme } from '../style/global'
 
@@ -39,26 +43,33 @@ export class App extends Component {
         <ThemeProvider theme={gridTheme}>
           <div>
             <AppContainer id="app-main-container">
-              <HeaderComponent />
               <AppMain>
                 <MainContainer>
-                  <div id="sectionConatiner">
-                    <Switch>
-                      <Route
-                        exact
-                        path='/login'
-                        component={LoginComponent}
-                      />
-                      <Route
-                        exact
-                        path='/profile'
-                        component={ProfileComponent}
-                      />
-                      <Redirect to='/login' />
-                    </Switch>
-                  </div>
+                  <Grid>
+                    <GridRow noBorder>
+                      <GridColumn xs={2}>
+                        <NewbieAvatar />
+                      </GridColumn>
+                      <GridColumn id="sectionConatiner" xs={10}>
+                        <Switch>
+                          <Route
+                            exact
+                            path='/login'
+                            component={LoginComponent}
+                          />
+                          <Route
+                            exact
+                            path='/profile'
+                            component={ProfileComponent}
+                          />
+                          <Redirect to='/login' />
+                        </Switch>
+                      </GridColumn>
+                    </GridRow>
+                  </Grid>
                 </MainContainer>
               </AppMain>
+              <FooterComponent />
             </AppContainer>
           </div>
         </ThemeProvider>
