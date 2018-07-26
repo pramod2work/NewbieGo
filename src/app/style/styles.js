@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { Grid as ThemeGrid, Row, Col } from 'react-styled-flexboxgrid'
+import cognizantBackground from '../../assets/img/cognizant-Screenshot_2018-07-26_13-57-59.png'
 
 import { isIE } from '../utils/global'
 
@@ -21,7 +22,6 @@ export const AppContainer = styled.div`
 
 export const AppMain = styled.main`
   flex: 1 0 auto;
-  background-color: ${styleVars.color.stoneExtraLight};
 `
 
 /* eslint-disable no-nested-ternary */
@@ -45,6 +45,7 @@ export const MainContainer = styled.div`
 /* eslint-enable no-nested-ternary */
 
 export const SectionContainer = styled.div`
+
   min-height: ${styleVars.sectionContainer.minHeight};
   background-color: ${props => (props.noBackgroundColor ? 'transparent' : styleVars.color.white)};
   border: ${props => ((props.noBorder || styleVars.app.isMobileApp) ? 'none' : `1px solid ${styleVars.color.stoneLight}`)};

@@ -2,6 +2,9 @@ import { injectGlobal, css } from 'styled-components'
 
 import styleVars, { defaultFont } from './global'
 
+import cognizantBackground from '../../assets/img/cognizant-Screenshot_2018-07-26_13-57-59.png'
+
+
 /* eslint-disable no-unused-expressions */
 injectGlobal`
   html {
@@ -10,6 +13,8 @@ injectGlobal`
 
 /* stylelint-disable property-no-vendor-prefix, declaration-block-no-shorthand-property-overrides */
   body {
+    
+    background-image:url(${cognizantBackground});
     margin: 0;
     color: ${styleVars.color.primaryStone} !important;
     background-color: ${styleVars.color.white} !important;
