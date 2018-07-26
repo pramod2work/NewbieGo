@@ -14,6 +14,21 @@ export const extraSmallFont = {
   font: '-apple-system-caption1',
 }
 
+export function fontFace(name, src, fontWeight = 'normal', fontStyle = 'normal'){
+  return `
+      @font-face{
+          font-family: "${name}";
+          src: url(${require('../../assets/fonts/' + src + '.eot')});
+          src: url(${require('../../assets/fonts/' + src + '.eot')}?#iefix) format("embedded-opentype"),
+               url(${require('../../assets/fonts/' + src + '.woff')}) format("woff"),
+               url(${require('../../assets/fonts/' + src + '.ttf')}) format("truetype"),
+               url(${require('../../assets/fonts/' + src + '.svg')}#${name}) format("svg");
+          font-style: ${fontStyle};
+          font-weight: ${fontWeight};
+      }
+  `
+}
+
 export const smallFont = {
   fontSize: '0.875em',
   lineHeight: '1.429',
