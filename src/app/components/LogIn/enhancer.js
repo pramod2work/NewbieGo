@@ -1,6 +1,6 @@
 import { handleCrashError } from '../../utils/errorMapping'
 // import { stateMapUrl } from '../../utils/stateMapping'
-// import { gotoPage } from '../history'
+import { gotoPage } from '../history'
 
 const enhancer = WrappedComponent => class PreferredNameComponent extends WrappedComponent {
   constructor(props) {
@@ -12,8 +12,8 @@ const enhancer = WrappedComponent => class PreferredNameComponent extends Wrappe
 
   componentDidUpdate(props) {
     window.setTimeout(() => {
-      this.setState({ ...this.state, isSubmitting: !this.state.isSubmitting })
-    }, 2000)
+      gotoPage('/profile')
+    }, 1000)
   }
 
   submitForm = ({ userName, password }) => {
