@@ -7,6 +7,7 @@ import { ThemeProvider } from 'styled-components'
 
 import LoginComponent from './LogIn'
 import HeaderComponent from './Header'
+import ProfileComponent from './Profile'
 import { gotoPage } from './history'
 
 import {
@@ -47,6 +48,11 @@ export class App extends Component {
                         exact
                         path='/login'
                         component={LoginComponent}
+                      />
+                      <Route
+                        exact
+                        path='/profile'
+                        component={ProfileComponent}
                       />
                       <Redirect to='/login' />
                     </Switch>

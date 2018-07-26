@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import styleVars from '../../style/global'
 
 export const HeaderContainer = styled.header`
-  position: fixed;
   z-index: 9;
   width: 100%;
   top: 0;

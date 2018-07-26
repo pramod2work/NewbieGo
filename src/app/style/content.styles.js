@@ -11,7 +11,7 @@ import Done from 'material-ui/svg-icons/action/done'
 import fingerPrintIcon from 'material-ui/svg-icons/action/fingerprint'
 import './global.styles'
 
-import styleVars, { extraLargeFont } from './global'
+import styleVars, { extraLargeFont, largeFont } from './global'
 
 export const Heading = styled.h1`
   margin: 0 0 ${props => props.marginBottom || '48px'};
@@ -27,6 +27,10 @@ const iconMediumFontSize = {
   width: '24px',
   height: '24px',
 }
+
+export const LargeFont = styled.span`
+  ${{ ...largeFont }};
+`
 
 export const IconBackAction = {
   color: styleVars.color.lighterFontStone70,
