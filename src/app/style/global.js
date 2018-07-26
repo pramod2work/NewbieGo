@@ -1,4 +1,4 @@
-const deepOceanBlue = '#004165'
+const deepOceanBlue = '#007dba'
 
 export const defaultFont = {
   fontSize: '16px',
