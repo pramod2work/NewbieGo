@@ -4,16 +4,16 @@
 
 ### Main Dev Scripts
 
-* `yarn start` or `npm start` (Run the local webpack dev server environment with mountebank)
-* `yarn prod` or `npm run prod` (Create and serve the production package)
-* `yarn prod:build` or `npm run prod:build` (Create the production package)
-* `yarn dll` or `npm run dll` (Generate the DLL bundle)
-* `yarn update:cache` or `npm run update:cache` (Delete yarn cache, node_modules and cache packages and install fresh package)
+* `yarn start` or `node yarn-local.js start` (Run the local webpack dev server environment with mountebank)
+* `yarn prod` or `node yarn-local.js prod` (Create and serve the production package)
+* `yarn prod:build` or `node yarn-local.js prod:build` (Create the production package)
+* `yarn dll` or `node yarn-local.js dll` (Generate the DLL bundle)
+* `yarn update:cache` or `node yarn-local.js update:cache` (Delete yarn cache, node_modules and cache packages and install fresh package)
 
 ### Basic Dev Flow
 
-1. Run `yarn dll` (this will only need to be done once at the start, and then you will be prompted when you need to run again due to updates)
-2. Run `yarn start`
+1. Run `yarn dll` or `node yarn-local.js dll` (this will only need to be done once at the start, and then you will be prompted when you need to run again due to updates)
+2. Run `yarn start` or `node yarn-local.js start`
 3. Update the code
 4. Track your changes using git
 5. Push your code

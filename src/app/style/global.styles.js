@@ -4,10 +4,6 @@ import styleVars, { fontFace, defaultFont } from './global'
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
-  @font-face {
-    font-family: 'myraid-pro';
-    src: url('${regularMyriadFont}');
-  }
 
   html {
     font-family: 'myraid-pro';
