@@ -1,6 +1,6 @@
 import { injectGlobal, css } from 'styled-components'
-
-import styleVars, { defaultFont } from './global'
+// import MyFont from './../../../assets/fonts/proxima-nova';
+import styleVars, { fontFace, defaultFont } from './global'
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
@@ -8,7 +8,10 @@ injectGlobal`
     ${{ ...defaultFont }};
   }
 
-/* stylelint-disable property-no-vendor-prefix, declaration-block-no-shorthand-property-overrides */
+  ${fontFace('Proxima Nova', 'proxima-nova/Mark Simonson - Proxima Nova Alt Regular-webfont')}
+  ${fontFace('Proxima Nova', 'proxima-nova/Mark Simonson - Proxima Nova Semibold-webfont')}
+
+  /* stylelint-disable property-no-vendor-prefix, declaration-block-no-shorthand-property-overrides */
   body {
     margin: 0;
     color: ${styleVars.color.primaryStone} !important;
@@ -19,6 +22,7 @@ injectGlobal`
     text-transform: none;
     -webkit-font-smoothing: antialiased;
     line-height: ${defaultFont.lineHeight};
+    font-family: 'Proxima Nova', Myriad Pro, Verdana, Arial, sans-serif;
     ${{ ...defaultFont }};
 
     input,
