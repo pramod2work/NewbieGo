@@ -1,10 +1,17 @@
 import { injectGlobal, css } from 'styled-components'
 
 import styleVars, { defaultFont } from './global'
+import regularMyriadFont from '../../assets/fonts/MyriadPro-Regular.woff'
 
 /* eslint-disable no-unused-expressions */
 injectGlobal`
+  @font-face {
+    font-family: 'myraid-pro';
+    src: url('${regularMyriadFont}');
+  }
+
   html {
+    font-family: 'myraid-pro';
     ${{ ...defaultFont }};
   }
 
@@ -19,6 +26,7 @@ injectGlobal`
     text-transform: none;
     -webkit-font-smoothing: antialiased;
     line-height: ${defaultFont.lineHeight};
+    font-family: 'myraid-pro';
     ${{ ...defaultFont }};
 
     input,

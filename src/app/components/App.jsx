@@ -6,7 +6,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import { ThemeProvider } from 'styled-components'
 
 import LoginComponent from './LogIn'
-import HeaderComponent from './Header'
 import ProfileComponent from './Profile'
 import { gotoPage } from './history'
 
@@ -39,7 +38,6 @@ export class App extends Component {
         <ThemeProvider theme={gridTheme}>
           <div>
             <AppContainer id="app-main-container">
-              <HeaderComponent />
               <AppMain>
                 <MainContainer>
                   <div id="sectionConatiner">
