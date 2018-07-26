@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { Grid as ThemeGrid, Row, Col } from 'react-styled-flexboxgrid'
 
-import { isIE } from '../utils/global'
+import newbieGoLogo from '../../assets/img/newbie-logo.png'
 
 import styleVars, { largeFont } from './global'
 import {
@@ -357,6 +357,13 @@ export const GridColumn = styled(Col)`
   padding-left: ${props => props.paddingLeft || '16px'};
   padding-right: ${props => props.paddingRight || '16px'};
   padding-bottom: ${props => props.paddingBottom || '0'};
+`
+
+export const NewbieAvatar = styled.img.attrs({
+  src: newbieGoLogo,
+})`
+  width: 100%;
+  margin-top: -25px;
 `
 
 export const GridColHeader = GridColumn.extend`
