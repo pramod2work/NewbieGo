@@ -6,7 +6,7 @@ import enhancer from './enhancer'
 import PrimaryActionBar from '../common/PrimaryActionBar'
 import { Heading, HeadingSpan } from '../../style/content.styles'
 import {
-  SectionContainer,
+  SmallSectionContainer,
   TransitionStateFromRight,
   ScaleSectionContainer,
   Grid,
@@ -22,7 +22,7 @@ export class PreferredNameUpdate extends Component {
 
     return (
       <TransitionStateFromRight>
-        <SectionContainer>
+        <SmallSectionContainer>
           <Grid>
             <GridColHeader>
               <Heading data-test-id="page-heading">
@@ -46,7 +46,7 @@ export class PreferredNameUpdate extends Component {
             </ScaleSectionContainer>
 
           </Grid>
-        </SectionContainer>
+        </SmallSectionContainer>
       </TransitionStateFromRight>
     )
   }
