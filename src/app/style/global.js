@@ -39,7 +39,7 @@ export const smallFont = {
 export const mediumFont = {
   fontSize: '1.1em',
   lineHeight: '1.333',
-  letterSpacing: '0',
+  letterSpacing: '0.2px',
   font: '-apple-system-body',
   verticalAlign: '-webkit-baseline-middle',
 }
@@ -47,7 +47,7 @@ export const mediumFont = {
 export const largeFont = {
   fontSize: '1.125em',
   lineHeight: '1.2',
-  letterSpacing: '-0.1px',
+  letterSpacing: '0.1px',
   font: '-apple-system-title2',
   fontWeight: '600',
   color: deepOceanBlue,
@@ -56,7 +56,7 @@ export const largeFont = {
 export const extraLargeFont = {
   fontSize: '1.5em',
   lineHeight: '1.062',
-  letterSpacing: '-0.25px',
+  letterSpacing: '0.1px',
   font: '-apple-system-title0',
   // eslint-disable-next-line no-nested-ternary
   color: deepOceanBlue,
@@ -92,7 +92,7 @@ const styleVars = {
     lighterFontStone70: '#6b7782', // this is changed to 75% stone to fix accessibility issue
     disabledStone40: '#b0b7bc',
     stoneLight: '#e2e4e6',
-    stoneExtraLight: '#f5f6f6',
+    stoneExtraLight: '#fafafa',
     red: '#dd2e2e',
     redBlured: 'rgba(221, 46, 46, 0.1)',
     redHover: '#ff0000',
