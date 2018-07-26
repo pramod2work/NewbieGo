@@ -49,7 +49,7 @@ export class ProfileComponent extends Component {
             </GridColHeader>
 
             <ScaleSectionContainer>
-              <p> Welcome Newbie GO</p>
+              <p> Welcome Newbie GO!!</p>
 
               <PrimaryActionBar
                 actionButtonLabel="Done"
