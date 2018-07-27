@@ -15,7 +15,7 @@ export const apiUriConfig = {
 }
 
 export const getBaseName = () => {
-  let baseName = '/newbie-go'
+  let baseName = ''
   if (isSTEnvironment()) {
     baseName = `${apiPaths.stEnvContext}/`
   } else if (environment.ci) {

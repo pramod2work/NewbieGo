@@ -93,6 +93,7 @@ const styleVars = {
     disabledStone40: '#b0b7bc',
     stoneLight: '#e2e4e6',
     stoneExtraLight: '#fafafa',
+    donutColor: '#cfcfcf',
     red: '#dd2e2e',
     redBlured: 'rgba(221, 46, 46, 0.1)',
     redHover: '#ff0000',
