@@ -36,8 +36,11 @@ export class PreferredNameUpdate extends Component {
             <ScaleSectionContainer>
               <p> Welcome Newbie GO!!</p>
 
+              <label> Enter your Code </label>
+              <input type="text" size="20"/>
+
               <PrimaryActionBar
-                actionButtonLabel="Done"
+                actionButtonLabel="Start Onboarding"
                 handleClick={this.submitForm}
                 isSubmitting={isSubmitting}
                 paddingTop="24px"
