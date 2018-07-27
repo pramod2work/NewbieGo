@@ -81,7 +81,7 @@ export class ProfileComponent extends Component {
             </p>
 
             <ParaWrapper marginBottom="4px">
-              <MediumFont>Hold on tight, you'r almost there.</MediumFont>
+              <MediumFont>Hold on tight, you're almost there.</MediumFont>
             </ParaWrapper>
 
             <GridRow noBorder marginBottom="32px">

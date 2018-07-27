@@ -42,7 +42,7 @@ export class LoginUpdate extends Component {
 
     return (
       <TransitionStateFromRight>
-        <SectionContainer>
+        <SectionContainer noBorder>
           <Grid>
             <GridColHeader>
               <Heading data-test-id="page-heading">
