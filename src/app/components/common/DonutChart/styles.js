@@ -8,7 +8,7 @@ export const DonutSvg = styled.svg`
 
 export const StrokeFill = styled.circle`
   fill: transparent;
-  stroke: ${styleVars.color.stoneExtraLight};
+  stroke: ${styleVars.color.donutColor};
   stroke-width: 26;
 `
 

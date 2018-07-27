@@ -13,8 +13,12 @@ import {
   GridColumn,
   GridColHeader,
   InputWrapper,
+  EventDetails,
 } from '../../style/styles'
 import styleVars from '../../style/global'
+import event1 from '../../../assets/img/event-1.png'
+import event2 from '../../../assets/img/event-2.png'
+import event3 from '../../../assets/img/event-3.png'
 
 const renderCheckbox = ({ input, label, ...rest }) => (
   <Checkbox
@@ -22,20 +26,33 @@ const renderCheckbox = ({ input, label, ...rest }) => (
     checked={input.value ? true : false}
     onCheck={input.onChange}
     color="primary"
-    classes={{
-      root: {
-        fontFamily: 'myraid-pro',
-      },
-      checked: {
-        color: styleVars.color.oceanBlue,
-      }
-    }}
     {...rest}
   />
 )
 
 
 export class ProfileComponent extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { value: 40 }
+  }
+
+  componentDidMount() {
+    window.setTimeout(() => {
+      this.setState({ ...this.state, value: 42 })
+    }, 1000)
+  }
+
+  componentDidUpdate() {
+    const { value } = this.state
+    if (value < 60) {
+      window.setTimeout(() => {
+        this.setState({ ...this.state, value: value + 1 })
+      }, 500)
+    }
+  }
+
   render() {
     const {
       handleSubmit,
@@ -69,24 +86,24 @@ export class ProfileComponent extends Component {
 
             <GridRow noBorder marginBottom="32px">
               <GridColumn xs={2}>
-                <DonutChart />
+                <DonutChart value={this.state.value} />
               </GridColumn>
 
               <GridColumn xs={10}>
-                <ParaWrapper paddingLeft="15px" marginBottom="5px">
+                <ParaWrapper paddingLeft="25px" marginBottom="5px">
                   <ExtraLighterFont>
                     <SmallFont>Retreive your details from Corporate Directory</SmallFont>
                   </ExtraLighterFont>
                 </ParaWrapper>
-                <ParaWrapper>
+                <ParaWrapper paddingLeft="15px">
                   <b>Setting up your mailbox and address book...</b>
                 </ParaWrapper>
-                <ParaWrapper paddingLeft="15px">
+                <ParaWrapper paddingLeft="25px">
                   <ExtraLighterFont>
                     <SmallFont>Set up login credentials on your laptop</SmallFont>
                   </ExtraLighterFont>
                 </ParaWrapper>
-                <ParaWrapper paddingLeft="23px">
+                <ParaWrapper paddingLeft="33px">
                   <ExtraLighterFont>
                     <SmallFont>Verify your login accross ANZ network</SmallFont>
                   </ExtraLighterFont>
@@ -102,7 +119,7 @@ export class ProfileComponent extends Component {
             </Heading>
           </GridColHeader>
 
-          <GridRow noBorder marginBottom="16px">
+          <GridRow noBorder marginBottom="32px">
             <form onSubmit={handleSubmit} style={{ width: '100%' }}>
               <GridColumn xs={12} paddingBottom="8px">
                 <InputWrapper checked>
@@ -164,6 +181,14 @@ export class ProfileComponent extends Component {
                 </HeadingSpan>
               </Heading>
             </GridColHeader>
+
+            <Grid>
+              <GridRow noBorder>
+                <EventDetails src={event1} />
+                <EventDetails src={event2} />
+                <EventDetails src={event3} />
+              </GridRow>
+            </Grid>
 
           </ScaleSectionContainer>
 

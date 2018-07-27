@@ -415,7 +415,7 @@ export const SectionContainerWithSwimLine = SectionContainer.extend`
 
 export const InputWrapper = styled.div`
   label {
-    font-family: myraid-pro !important;
+    font-family: 'Proxima Nova', 'Myriad Pro', Verdana, Arial, sans-serif !important;
   }
 
   ${props => props.checked && css`
@@ -426,4 +426,9 @@ export const InputWrapper = styled.div`
       color: ${styleVars.color.oceanBlue} !important;
     }
   `}
+`
+export const EventDetails = styled.img`
+  width: 25%;
+  height: 170px;
+  padding-right: 24px;
 `

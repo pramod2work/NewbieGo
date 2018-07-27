@@ -24,7 +24,7 @@ injectGlobal`
     text-transform: none;
     -webkit-font-smoothing: antialiased;
     line-height: ${defaultFont.lineHeight};
-    font-family: 'Proxima Nova', Myriad Pro, Verdana, Arial, sans-serif;
+    font-family: 'Proxima Nova', 'Myriad Pro', Verdana, Arial, sans-serif;
     ${{ ...defaultFont }};
 
     input,
