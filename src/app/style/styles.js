@@ -21,12 +21,15 @@ export const AppContainer = styled.div`
 
 export const AppMain = styled.main`
   flex: 1 0 auto;
-  background-color: ${styleVars.color.white};
+  background-color: ${styleVars.color.oceanBlue};
 `
 
 /* eslint-disable no-nested-ternary */
 export const MainContainer = styled.div`
   margin: 48px auto 0;
+  padding: 30px;
+  background-color: ${styleVars.color.white};
+  border-radius: 4px;
   max-width: ${styleVars.container.width.lg};
 
   @media screen and (max-width: ${styleVars.container.breakpoint.md}) {
