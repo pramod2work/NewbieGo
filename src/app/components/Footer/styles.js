@@ -5,6 +5,7 @@ import styleVars from '../../style/global'
 export const FooterContainer = styled.footer`
   width: 100%;
   bottom: 0;
+  background-color: ${styleVars.color.oceanBlue};
 `
 
 export const FooterSection = styled.div`
