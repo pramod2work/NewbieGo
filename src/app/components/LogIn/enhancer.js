@@ -11,12 +11,15 @@ const enhancer = WrappedComponent => class PreferredNameComponent extends Wrappe
   }
 
   componentDidUpdate(props) {
-    window.setTimeout(() => {
-      gotoPage('/profile')
-    }, 1000)
+    if(this.isSubmit) {
+      window.setTimeout(() => {
+        gotoPage('/profile')
+      }, 1000)
+    }
   }
 
   submitForm = ({ userName, password }) => {
+    this.isSubmit = true
     this.setState({ ...this.state, isSubmitting: !this.state.isSubmitting })
   }
 

@@ -414,7 +414,7 @@ export const SectionContainerWithSwimLine = SectionContainer.extend`
 `
 
 export const InputWrapper = styled.div`
-  label {
+  label, input {
     font-family: 'Proxima Nova', 'Myriad Pro', Verdana, Arial, sans-serif !important;
   }
 
