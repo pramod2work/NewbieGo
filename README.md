@@ -37,6 +37,36 @@ To update packages
 yarn upgrade 
 ```
 
+### Working with Docker
+
+To build the container:
+```sh
+docker build -t newbie-go .
+```
+
+Next up we want to start the container in interactive mode as there are a few manual steps that need to happen currently:
+```sh
+docker run -it newbie-go /bin/bash
+```
+
+We have to authenticate against Google with our user account:
+```sh
+gcloud auth login
+```
+You'll need to copy and paste a link into your browser to get a token for authentication. Once that is complete we want to set which project we are using:
+
+```sh
+gcloud config set project sprout-project-6
+```
+
+Finally we can build our app. Unfortunately with how app engine deploys, we need to symlink our build directory into a folder where our `app.yaml` file lives. This is so only files we need are pushed to appengine/cloud storage:
+```sh
+yarn prod:build
+cd gcp
+ln -s /newbie-go/build /newbie-go/gcp/build
+gcloud app deploy
+```
+
 Below are the details related to differnt types of commits
 
 https://github.com/conventional-changelog-archived-repos/conventional-changelog-angular/blob/master/convention.md
